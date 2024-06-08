@@ -1,0 +1,123 @@
+body.lo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+.login-container {
+            background-color: #e9ecef;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+.login-title {
+            margin-bottom: 1.5rem;
+        }
+.btn-social {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+.border-bottom {
+    width: 109rem;
+    height: 5rem;
+}
+
+.welcome-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.welcome-icon {
+    font-size: 4rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+.welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.welcome-subtitle {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+/*modulo principal*/
+
+.cardp {
+    margin: 1rem 0;
+}
+.cardp-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardp-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.cardp-text {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+/*Usuarios*/
+
+.table-containeru {
+    margin-bottom: 2rem;
+}
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+/*Clientes*/
+
+.table-containerc {
+    margin-bottom: 2rem;
+}
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+/*Categorias*/
+
+.table-containerc {
+    margin-bottom: 2rem;
+}
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+.elec {
+    max-width: 100px;
+}
+
+/*Productos*/
+
+.table-containerp {
+    margin-bottom: 2rem;
+}
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+.produc {
+    max-width: 100px;
+}
+
+/*pedidos*/
+
+.table-containerpe {
+    margin-bottom: 2rem;
+}
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}

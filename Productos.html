@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Panel Administrativo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            
+            <div class="list-group list-group-flush">
+                <a href="Index.html" class="list-group-item list-group-item-action bg-light">Inicio</a>
+                <a href="Principal.html" class="list-group-item list-group-item-action bg-light">Principal</a>
+                <a href="Usuarios.html" class="list-group-item list-group-item-action bg-light">Usuarios</a>
+                <a href="clientes.html" class="list-group-item list-group-item-action bg-light">Clientes</a>
+                <a href="Categorias.html" class="list-group-item list-group-item-action bg-light">Categorías</a>
+                <a href="Productos.html" class="list-group-item list-group-item-action bg-light">Productos</a>
+                <a href="Pedidos.html" class="list-group-item list-group-item-action bg-light">Pedidos</a>
+                <a href="sesion.html" class="list-group-item list-group-item-action bg-light">Salir</a>
+            </div>
+        </div>
+        
+
+        
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <h1 class="mt-4">Panel Administrativo</h1>
+            </nav>
+
+            <div class="container-fluid">
+                
+                <div class="container">
+                    <h1 class="text-center mb-5">Módulo de Productos</h1>
+                    
+                    <!-- Botón para abrir el formulario de registro -->
+                    <div class="mb-3 text-right">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#productModal">Registrar Producto</button>
+                    </div>
+                    
+                    <!-- Tabla de Productos -->
+                    <div class="table-container">
+                        <table class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Nombre</th>
+                                    <th>Imagen</th>
+                                    <th>Cantidad</th>
+                                    <th>Descripción</th>
+                                    <th>Valor</th>
+                                    <th>Inventario</th>
+                                    <th>Categorías</th>
+                                    <th>Fecha</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Ejemplo de fila de producto -->
+                                <tr>
+                                    <td>001</td>
+                                    <td>Audifonos inalambricos</td>
+                                    <td><img src="Img/OIP.jfif" class="produc" alt="Imagen del producto"></td>
+                                    <td>10</td>
+                                    <td>Audifonos inalambricos con altavoces de alta definicon de gran comodidad.</td>
+                                    <td>$100.000.00</td>
+                                    <td>50</td>
+                                    <td>Electronicos</td>
+                                    <td>2024-01-01</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#productModal">Editar</button>
+                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                    </td>
+                                </tr>
+                                <!-- Repetir filas según los productos -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Modal para Registrar/Actualizar Producto -->
+                <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productModalLabel">Registrar Producto</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="productForm">
+                                    <div class="form-group">
+                                        <label for="productCode">Código</label>
+                                        <input type="text" class="form-control" id="productCode" placeholder="Código del producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productName">Nombre</label>
+                                        <input type="text" class="form-control" id="productName" placeholder="Nombre del producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productImage">Imagen</label>
+                                        <input type="text" class="form-control" id="productImage" placeholder="URL de la imagen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productQuantity">Cantidad</label>
+                                        <input type="number" class="form-control" id="productQuantity" placeholder="Cantidad">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productDescription">Descripción</label>
+                                        <textarea class="form-control" id="productDescription" rows="3" placeholder="Descripción del producto"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productValue">Valor</label>
+                                        <input type="number" class="form-control" id="productValue" placeholder="Valor del producto" step="0.01">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productInventory">Inventario</label>
+                                        <input type="number" class="form-control" id="productInventory" placeholder="Inventario disponible">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productCategory">Categorías</label>
+                                        <input type="text" class="form-control" id="productCategory" placeholder="Categoría del producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productDate">Fecha</label>
+                                        <input type="date" class="form-control" id="productDate">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

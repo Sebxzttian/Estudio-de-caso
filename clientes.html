@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Panel Administrativo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            
+            <div class="list-group list-group-flush">
+                <a href="Index.html" class="list-group-item list-group-item-action bg-light">Inicio</a>
+                <a href="Principal.html" class="list-group-item list-group-item-action bg-light">Principal</a>
+                <a href="Usuarios.html" class="list-group-item list-group-item-action bg-light">Usuarios</a>
+                <a href="clientes.html" class="list-group-item list-group-item-action bg-light">Clientes</a>
+                <a href="Categorias.html" class="list-group-item list-group-item-action bg-light">Categorías</a>
+                <a href="Productos.html" class="list-group-item list-group-item-action bg-light">Productos</a>
+                <a href="Pedidos.html" class="list-group-item list-group-item-action bg-light">Pedidos</a>
+                <a href="sesion.html" class="list-group-item list-group-item-action bg-light">Salir</a>
+            </div>
+        </div>
+        
+
+        
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <h1 class="mt-4">Panel Administrativo</h1>
+            </nav>
+
+            <div class="container-fluid">
+                
+                <div class="container">
+                    <h1 class="text-center mb-5">Módulo de Clientes</h1>
+            
+                    <!-- Tabla de Clientes -->
+                    <div class="table-containerc">
+                        <table class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Documento</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Email</th>
+                                    <th>Celular</th>
+                                    <th>Dirección</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Ejemplo de fila de cliente -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>12345678</td>
+                                    <td>María</td>
+                                    <td>López</td>
+                                    <td>maria.lopez@example.com</td>
+                                    <td>123-456-7890</td>
+                                    <td>Calle 4# 123</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#clientModal">Editar</button>
+                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                    </td>
+                                </tr>
+                                <!--filas clientes -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Modal para Actualizar Cliente -->
+                <div class="modal fade" id="clientModal" tabindex="-1" aria-labelledby="clientModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="clientModalLabel">Actualizar Cliente</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="clientForm">
+                                    <div class="form-group">
+                                        <label for="clientDocument">Número de Documento</label>
+                                        <input type="text" class="form-control" id="clientDocument" placeholder="Número de documento">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="clientFirstName">Nombres</label>
+                                        <input type="text" class="form-control" id="clientFirstName" placeholder="Nombres">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="clientLastName">Apellidos</label>
+                                        <input type="text" class="form-control" id="clientLastName" placeholder="Apellidos">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="clientEmail">Email</label>
+                                        <input type="email" class="form-control" id="clientEmail" placeholder="Correo electrónico">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="clientPhone">Celular</label>
+                                        <input type="text" class="form-control" id="clientPhone" placeholder="Número de celular">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="clientAddress">Dirección</label>
+                                        <input type="text" class="form-control" id="clientAddress" placeholder="Dirección">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="clientPassword">Contraseña</label>
+                                        <input type="password" class="form-control" id="clientPassword" placeholder="Contraseña">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

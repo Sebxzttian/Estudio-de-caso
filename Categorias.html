@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Panel Administrativo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            
+            <div class="list-group list-group-flush">
+                <a href="Index.html" class="list-group-item list-group-item-action bg-light">Inicio</a>
+                <a href="Principal.html" class="list-group-item list-group-item-action bg-light">Principal</a>
+                <a href="Usuarios.html" class="list-group-item list-group-item-action bg-light">Usuarios</a>
+                <a href="clientes.html" class="list-group-item list-group-item-action bg-light">Clientes</a>
+                <a href="Categorias.html" class="list-group-item list-group-item-action bg-light">Categorías</a>
+                <a href="Productos.html" class="list-group-item list-group-item-action bg-light">Productos</a>
+                <a href="Pedidos.html" class="list-group-item list-group-item-action bg-light">Pedidos</a>
+                <a href="sesion.html" class="list-group-item list-group-item-action bg-light">Salir</a>
+            </div>
+        </div>
+        
+
+        
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <h1 class="mt-4">Panel Administrativo</h1>
+            </nav>
+
+            <div class="container-fluid">
+                
+                <div class="container">
+                    <h1 class="text-center mb-5">Módulo de Categorías</h1>
+                    
+                    <!-- Botón para abrir el formulario de registro -->
+                    <div class="mb-3 text-right">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#categoryModal">Registrar Categoría</button>
+                    </div>
+                    
+                    <!-- Tabla de Categorías -->
+                    <div class="table-containerc">
+                        <table class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Nombre</th>
+                                    <th>Imagen</th>
+                                    <th>Descripción</th>
+                                    <th>Fecha</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- fila de categoría -->
+                                <tr>
+                                    <td>001</td>
+                                    <td>Electrónica</td>
+                                    <td><img src="Img/electronicos.jpg" class="elec" alt="Imagen de la categoría"></td>
+                                    <td>Productos electrónicos</td>
+                                    <td>2024-01-01</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#categoryModal">Editar</button>
+                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                    </td>
+                                </tr>
+                                <!-- filas categorías -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Modal para Registrar/Actualizar Categoría -->
+                <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="categoryModalLabel">Registrar Categoría</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="categoryForm">
+                                    <div class="form-group">
+                                        <label for="categoryCode">Código</label>
+                                        <input type="text" class="form-control" id="categoryCode" placeholder="Código de la categoría">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="categoryName">Nombre</label>
+                                        <input type="text" class="form-control" id="categoryName" placeholder="Nombre de la categoría">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="categoryImage">Imagen</label>
+                                        <input type="text" class="form-control" id="categoryImage" placeholder="URL de la imagen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="categoryDescription">Descripción</label>
+                                        <textarea class="form-control" id="categoryDescription" rows="3" placeholder="Descripción de la categoría"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="categoryDate">Fecha</label>
+                                        <input type="date" class="form-control" id="categoryDate">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
